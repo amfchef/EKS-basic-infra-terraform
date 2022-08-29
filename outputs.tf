@@ -27,3 +27,12 @@ output "az" {
   description = "aws_availability_zones.available.names"
   value       = data.aws_availability_zones.available.names
 }
+# Prints out 
+/*
+output "lb_ip" {
+  value = kubernetes_service.nginx.status.0.load_balancer.0.ingress.0.hostname
+} 
+*/
+output "cluster_info_id" {
+  value = data.terraform_remote_state.eks.outputs.cluster_id
+}
