@@ -22,3 +22,8 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value       = local.cluster_name
 }
+# data.aws_availability_zones.available.names, 0, 3
+output "az" {
+  description = "aws_availability_zones.available.names"
+  value       = data.aws_availability_zones.available.names
+}
